@@ -1,0 +1,48 @@
+<div class="newsbox">
+  <his-aside/>
+  <div class="newsbody">
+    <div>
+      <p-button label="返回" routerLink="/home-page" styleClass="p-button-rounded p-button-success" [style]=" {'background-color': '#CFE8DA', 'color': '	#26715D'}"></p-button>
+      <strong style="font-size: 30px; padding-left: 20px;">最新消息</strong>
+    </div><br>
+    <div>
+      <p-avatar label="未完成" styleClass="mr-2" size="large" [style]="{ 'background-color': '#FFDCC0', width: '100px', height: '40px', 'font-size': '20px'}"></p-avatar>
+      <div class="newstable">
+        <p-table [value]="unFinishNews" [style]="{ padding: '0rem 0rem'}">
+          <ng-template pTemplate="body" let-news>
+              <tr>
+                <td width="10%"> <td>
+                <td width="15%">{{ news.date }}</td>
+                <td width="45%">{{ news.warning }}</td>
+                <td width="30%">{{ news.link }}</td>
+              </tr>
+          </ng-template>
+        </p-table><br>
+
+        <p-avatar label="一般消息" styleClass="mr-2" size="large" [style]="{ 'background-color': '#404944', color: 'white', width: '100px', height: '40px', 'font-size': '20px'}"></p-avatar>
+        <p-table [value]="normalNews" [style]="{ padding: '0rem 0rem'}">
+          <ng-template pTemplate="body" let-news>
+              <tr>
+                  <td width="10%"> <td>
+                  <td width="15%">{{ news.date }}</td>
+                  <td width="45%">{{ news.warning }}</td>
+                  <td width="30%">{{ news.link }}</td>
+              </tr>
+          </ng-template>
+        </p-table><br>
+
+        <p-avatar label="已完成" styleClass="mr-2" size="large" [style]="{ 'background-color': '#99CFC1', color: '#1E6955', width: '100px', height: '40px', 'font-size': '20px'}"></p-avatar>
+        <p-table [value]="finishNews" [style]="{ padding: '0rem 0rem'}">
+          <ng-template pTemplate="body" let-news>
+              <tr>
+                <td width="10%"> <td>
+                <td width="15%">{{ news.date }}</td>
+                <td width="45%">{{ news.warning }}</td>
+                <td width="30%">{{ news.link }}</td>
+              </tr>
+          </ng-template>
+        </p-table>
+      <div>
+    </div>
+  </div>
+</div>

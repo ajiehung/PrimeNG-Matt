@@ -1,0 +1,31 @@
+<div class="Sidebar">
+
+  <p-sidebar [(visible)]="sidebarVisible">
+
+  <i class="pi pi-user" style="font-size: 1.5rem"> {{asideTitle}} </i> <br>
+  <i class="pi pi-search" style="font-size: 1.5rem"> {{asideElement}} </i><br>
+
+  <a routerLink="/home-page/page1/1" routerLinkActive="active"> Page1 route</a>
+  <br>
+  <a routerLink="/home-page/page2/2" routerLinkActive="active"> Page2 route</a>
+
+  </p-sidebar>
+
+  <div class="asideup">
+    <!-- <p-button (click)="sidebarVisible = true"  styleClass="p-button-link"> > </p-button> -->
+  </div>
+
+  <div class="asidemid">
+    <img src="../../../assets/hpc_icon.png" alt="image"><br>
+  </div>
+
+  <div class="asidedown">
+    <p-button icon="pi pi-home" styleClass="p-button-secondary p-button-text" routerLink="/home-page"></p-button>
+    <p-button icon="pi pi-user" styleClass="p-button-secondary p-button-text" (click)="menu.toggle($event)"></p-button>
+    <p-tieredMenu #menu [model]="user" [popup]="true"></p-tieredMenu>
+    <p-button icon="pi pi-bell" styleClass="p-button-secondary p-button-text"></p-button>
+    <p-button icon="pi pi-th-large" styleClass="p-button-secondary p-button-text"></p-button>
+    <p-button icon="pi pi-sign-out" styleClass="p-button-secondary p-button-text" routerLink="/login"></p-button>
+  </div>
+
+</div>

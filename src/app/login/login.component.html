@@ -1,0 +1,20 @@
+<div class="box">
+    <p-card class="pcardbox">
+        <div class="setcenter">
+          <img src="../../../assets/login_icon.png" alt="image">
+          <p> 歡迎使用醫療資訊系統</p><br>
+        </div>
+        <div class="setcenter">
+          帳號<br>
+          <input type="account" pInputText [(ngModel)]="account" placeholder="請輸入帳號"/>
+        </div><br>
+        <div class="setcenter">
+          密碼<br>
+          <p-password [(ngModel)]="password" [toggleMask]="true" placeholder="請輸入密碼"></p-password>
+        </div><br>
+        <div class="setright">
+          <a href="login">忘記密碼？</a>
+        </div><br>
+        <p-button label="登入" styleClass="p-button-rounded p-button-success" (click)="dologin()" [style]="{width:'200px'}"></p-button>
+    </p-card>
+</div>

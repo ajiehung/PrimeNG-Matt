@@ -1,0 +1,33 @@
+.Sidebar{
+  width:50px;
+  height:100%;
+  float:left;
+  text-align:center;
+  font-size:15px;
+  color:black;
+  font-weight:bold;
+  background-color: #D9DBD7;
+}
+
+.asideup{
+  width: 100%;
+  height: 65%
+}
+
+.asidemid{
+  width: 100%;
+  height: 5%;
+}
+
+.asidedown{
+  width: 100%;
+  height: 30%
+}
+
+:host ::ng-deep .p-tieredmenu{
+  left: 50px!important;
+}
+
+.chrisimg{
+  background: url('../../../assets/chris.png')!important;
+}

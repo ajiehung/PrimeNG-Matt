@@ -1,0 +1,17 @@
+<div class="newsbox">
+  <div class="newstitle">
+    <h1>最新消息</h1>
+    <p-button label="查看更多" routerLink="/news-page" routerLinkActive="active" styleClass="p-button-rounded p-button-success"></p-button>
+  </div>
+  <div class="newsevent">
+    <p-table [value]="news">
+      <ng-template pTemplate="body" let-news>
+          <tr>
+              <td>{{ news.date }}</td>
+              <td>{{ news.warning }}</td>
+              <td>{{ news.link }}</td>
+          </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

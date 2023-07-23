@@ -1,0 +1,35 @@
+.box{
+  display: flex;
+  width: 100%;
+  height: 80%;
+  align-content: center;
+  justify-content: center;
+}
+
+.pcardbox{
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+:host ::ng-deep .p-inputtext{
+  width:200px;
+}
+
+:host ::ng-deep .p-component{
+  display: flex;
+}
+
+.setcenter{
+  text-align: center;
+}
+
+.setright{
+  text-align: right;
+}
+
+.setleft{
+  text-align: left;
+}
+
